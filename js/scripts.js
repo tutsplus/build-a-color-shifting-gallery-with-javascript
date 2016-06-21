@@ -79,7 +79,10 @@ function processImages() {
 
 // On document ready.
 $( function() {
-    processImages();
+    // processImages();
+    $( 'body' ).imagesLoaded().done( function( instance ) {
+        processImages();
+    });
 
     // Mouse events.
     $( ".gallery-item" ).mouseenter( function() {
